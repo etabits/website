@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "wintersmith-less": "*",
+    "wintersmith-jade": "*",
+    "wintersmith-nap": "*"
+  }
+}

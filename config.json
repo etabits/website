@@ -1,0 +1,13 @@
+{
+  "locals": {
+    "title": "ηBits Web Development & Solution"
+  },
+  "plugins": ["wintersmith-jade", "wintersmith-less", "wintersmith-nap"],
+  "nap": {
+    "assets": {
+      "css": {
+        "main": ["/css/*"]
+      }
+    }
+  }
+}
