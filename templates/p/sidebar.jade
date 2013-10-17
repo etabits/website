@@ -1,0 +1,8 @@
+.sidebar-nav
+	ul.nav.nav-pills.nav-stacked
+		li
+			a(href="#content") ηBits Syria
+		each label in page.html.match(/<h2>([^<]+)/g)
+			li
+				- label = label.substr(4)
+				a(href='#'+label.replace(/ +/g, '-'))= label
