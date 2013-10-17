@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'etabits';
-  src: url('../font/etabits.eot?16145756');
-  src: url('../font/etabits.eot?16145756#iefix') format('embedded-opentype'),
-       url('../font/etabits.woff?16145756') format('woff'),
-       url('../font/etabits.ttf?16145756') format('truetype'),
-       url('../font/etabits.svg?16145756#etabits') format('svg');
+  src: url('../font/etabits.eot?90896118');
+  src: url('../font/etabits.eot?90896118#iefix') format('embedded-opentype'),
+       url('../font/etabits.woff?90896118') format('woff'),
+       url('../font/etabits.ttf?90896118') format('truetype'),
+       url('../font/etabits.svg?90896118#etabits') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -14,7 +14,7 @@
 @media screen and (-webkit-min-device-pixel-ratio:0) {
   @font-face {
     font-family: 'etabits';
-    src: url('../font/etabits.svg?16145756#etabits') format('svg');
+    src: url('../font/etabits.svg?90896118#etabits') format('svg');
   }
 }
 */
@@ -54,5 +54,9 @@
 .icon-lock:before { content: '\e801'; } /* '' */
 .icon-cc:before { content: '\e804'; } /* '' */
 .icon-hourglass:before { content: '\e802'; } /* '' */
+.icon-gplus:before { content: '\e808'; } /* '' */
+.icon-twitter:before { content: '\e806'; } /* '' */
+.icon-facebook:before { content: '\e809'; } /* '' */
+.icon-github-circled:before { content: '\e805'; } /* '' */
 .icon-search:before { content: '\e807'; } /* '' */
 .icon-universal-access:before { content: '\e803'; } /* '' */
