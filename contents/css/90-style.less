@@ -68,6 +68,20 @@ h1, h2, h3, h4 {
 	font-family: 'Roboto Slab', "Palatino Linotype", Palatino, Palladio, "URW Palladio L", "Book Antiqua", Baskerville, "Bookman Old Style", "Bitstream Charter", "Nimbus Roman No9 L", Garamond, "Apple Garamond", "ITC Garamond Narrow", "New Century Schoolbook", "Century Schoolbook", "Century Schoolbook L", Georgia, serif;
 }
 
+#social {
+	margin-top: 5px;
+	a {
+		display: block;
+	}
+	.row {
+		overflow: hidden;
+		> div > a {
+			margin-top: 5px;
+		}
+
+	}
+}
+
 
 
 @media (min-width: 768px) {
@@ -81,5 +95,12 @@ h1, h2, h3, h4 {
 @media (max-width: 767px) {
 	#main-container .thumbnail {
 		height: 210px;
+	}
+	#social {
+		position: fixed;
+		bottom: 0;
+		width: 100%;
+		background: #fff;
+		z-index: 10;	
 	}
 }

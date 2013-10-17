@@ -1,1 +1,1 @@
-a = new ScrollSpy('sidebar')
+a = new ScrollSpy('sidenav')
