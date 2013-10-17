@@ -2,6 +2,8 @@
   "dependencies": {
     "wintersmith-less": "*",
     "wintersmith-jade": "*",
-    "wintersmith-nap": "*"
+    "wintersmith-nap": "*",
+    "wintersmith-coffee": "*",
+    "marked": "*"
   }
 }
