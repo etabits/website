@@ -1,6 +1,6 @@
 {
   "locals": {
-    "title": "ηBits Web Development & Solutions"
+    "title": "EtaBits Web Development & Solutions"
   },
   "plugins": ["wintersmith-jade", "wintersmith-less", "wintersmith-nap", "wintersmith-coffee"],
   "nap": {
