@@ -1,0 +1,85 @@
+.box-shadow(@shadow: 0 1px 3px rgba(0,0,0,.25)) {
+  -webkit-box-shadow: @shadow;
+     -moz-box-shadow: @shadow;
+          box-shadow: @shadow;
+}
+
+
+
+
+
+
+
+/*
+006994
+007BBB
+007BBB
+*/
+
+body {
+	background: #006994;
+	font-size: 1.5em;
+}
+#main-container {
+	padding-top: 3px;
+	background: #fff;
+	background: rgba(255, 255, 255, .94);
+	.box-shadow(0 1px 8px #ccc);
+	.page-header, h1 {
+		margin: 3px 0;
+	}
+	min-height: 1080px;
+
+	h2 {
+		background: #333;
+		color: #fff;
+		padding: 5px;
+	}
+
+	h3 {
+		margin-top: 20px;
+		border-left: 5px solid #333;
+		padding-left: 5px;
+	}
+
+
+
+	dd.email-reverse {
+	-webkit-user-select: none;
+     -moz-user-select: -moz-none;
+      -ms-user-select: none;
+          user-select: none;
+          cursor: default;
+	}
+	.thumbnail {
+		height: 190px;
+		p {
+			padding: 5px;
+			text-align: center;
+		}
+	}
+}
+
+body {
+	font-family: 'Open Sans', "Segoe UI", Candara, "Bitstream Vera Sans", "DejaVu Sans", "Bitstream Vera Sans", "Trebuchet MS", Verdana, "Verdana Ref", sans-serif;
+}
+
+h1, h2, h3, h4 {
+	font-family: 'Roboto Slab', "Palatino Linotype", Palatino, Palladio, "URW Palladio L", "Book Antiqua", Baskerville, "Bookman Old Style", "Bitstream Charter", "Nimbus Roman No9 L", Garamond, "Apple Garamond", "ITC Garamond Narrow", "New Century Schoolbook", "Century Schoolbook", "Century Schoolbook L", Georgia, serif;
+}
+
+
+
+@media (min-width: 768px) {
+	#sidebar {
+		position: fixed;
+		top: 10px;
+		padding-right: 3%;
+	}
+}
+
+@media (max-width: 767px) {
+	#main-container .thumbnail {
+		height: 210px;
+	}
+}

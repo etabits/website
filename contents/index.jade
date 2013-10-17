@@ -1,13 +1,106 @@
 ---
-title: 'ηBits Web Development & Solution'
+title: 'ηBits Web Development and Solutions'
 template: layout.jade
 ---
 
-.container#main-container
-	.row
-		.col-sm-3#sidebar(role='navigation')
-			include p/sidebar
-		.col-sm-9#content
-			.page-header
-				h1= title
+.page-header
+	h1
+		span.icon-etabits
+			abbr(title="EtaBits") ηBits
+			|  Syria
+		small  Web Development &amp; Solutions
 
+
+
+:markdown
+	**EtaBits** is your ultimate online business partner, it helps your business whether it is internet-based or internet-promoted.
+
+	**EtaBits** is a Syria based Web Consultancy, Development & Solutions firm. We aim at providing you with exactly what you need to reach your users and clients.
+
+	## Services
+
+	### Website Health Check
+
+	There are more aspects than basic functionality for websites and webapps to be really useful and appealing for users to use. Websites need to be **strong secure, usable, accessible, fast, user friendly** and their content has to be **strong optimized & reusable**.
+
+	We focus on helping you have a website that has:
+
+	#### <span class="icon-lock"></span> Security
+	Our team is proficient at penetration testing & security checks.
+
+	#### <span class="icon-universal-access"></span> Accessibility & Usability
+	Your website has to be always accessible and usable, no matter who is using it, and what device is it accessed from.
+
+	#### <span class="icon-search"></span> Optimized, User & Search Engine Friendly Content
+	Web is not only about having original content, content has to be organized, optimized, in a both user and search engine friendly manner.
+
+	#### <span class="icon-cc"></span> Reusable Content & Copyright
+	Creative Commons, Public Domain, Copyrighted content... you need to know about these, and use the right ones for your content. It helps both, people in using & sharing your content, and you in protecting your rights.
+
+	#### <span class="icon-hourglass"></span> High Performance
+	People like the web to be fast! if your app or website is slow, they will move on to your competitor's website.
+
+	### Website Development & Solutions
+	We create websites that incorporates all the different aspects mentioned above, a website that is **secure**, **usable & accessible**, **content-optimized**, **user & search engine friendly**, **properly-copyrighted** & **fast!**
+
+	### Web Hosting
+	United Kingdom, Canada or United States... we have the server that meets your needs.
+
+	### Domain Name Registration
+	We help you choose the right domain for your business: **.sy**, **.com**, **.net**, **.org**, etc.
+
+	## Service Levels
+
+
+
+	### Consultancy
+	Need help with your website? Not sure what available options are? Our team of industry experts can answer your questions and give you an overview of the available solutions.
+
+	### Testing & Reporting
+	Penetration test, content review, health check... our team will test your website for problems, and give you reports on the problems and issues your website is having, with recommendations on how to set them straight.
+
+	### Implementation & Supervision
+	Finding the problem is the first step, next you need to implement a solution. We can fix your website problems, or help your in-house / 3rd-party team implement them under our supervision.
+
+	### Integrated Solutions
+	Want a solution that takes into account all the aspects of successful websites? Or maybe you don't want to get involved in all the technical details? We can build you the solution that suits your need from A to Z.
+
+	## Portfolio
+
+- portfolio = []
+- portfolio.push(['bostah', 'http://bostah.com', 'Bostah Syrian Drama Portal']);
+- portfolio.push(['fairuz', 'http://fairuz.lastown.com', 'Fairuz Lyrics Website']);
+- portfolio.push(['ardroid', 'http://apps.samsung.com/venus/appquery/appDetail.as?appId=com.spapps.ardroid5', 'Ardroid Samsung App (Backend Development)']);
+- portfolio.push(['ecal', 'http://esyria.sy/ecal/', 'eSyria Cultural Calendar']);
+- portfolio.push(['zikrana', 'http://zikrana.com', 'Zikrana Videograhy Service']);
+- console.log(config)
+.row
+	each site in portfolio
+		.col-md-3.col-sm-4.col-xs-6
+			a.thumbnail(target='_blank', href=site[1])
+				img(alt=site[0], src='/img/portfolio/#{site[0]}.jpeg')
+				p=site[2]
+
+
+:markdown
+
+	## Contact
+
+address
+	dl.dl-horizontala
+		dt Address
+		dd Mezzeh Highway
+			br
+			| Damascus, Syria
+		dt Mobile
+		dd +963 988 770321
+		dt Email
+		dd.email-reverse(style="unicode-bidi:bidi-override; direction: rtl; text-align: left")
+			| moc.stibate＠nimda
+
+
+
+div.text-center(style='line-height: 1.5em; height: 19em; overflow: hidden')
+	.icon-etabits(style='font-size: 4em')
+	.icon-etabits(style='font-size: 8em')
+	.icon-etabits(style='font-size: 12em')
