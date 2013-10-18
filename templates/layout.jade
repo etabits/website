@@ -22,3 +22,4 @@ html(lang='en')
         .col-sm-9.col-sm-offset-3#content
           != page.html.replace(/<h2>([^<]+)/g, function(a,label) {return '<h2 id="'+label.replace(/ +/g, '-')+'">'+label})
     != nap.js('main')
+    #fb-root

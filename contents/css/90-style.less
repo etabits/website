@@ -3,7 +3,13 @@
      -moz-box-shadow: @shadow;
           box-shadow: @shadow;
 }
-
+.transition(@transition) {
+  -webkit-transition: @transition;
+     -moz-transition: @transition;
+      -ms-transition: @transition;
+       -o-transition: @transition;
+          transition: @transition;
+}
 
 
 
@@ -73,12 +79,22 @@ h1, h2, h3, h4 {
 	a {
 		display: block;
 	}
-	.row {
+	.row > div {
 		overflow: hidden;
-		> div > a {
-			margin-top: 5px;
+		height: 35px;
+		margin-top: 5px;
+		> div > div, > div > iframe {
+			margin: 5px !important;
 		}
-
+	}
+	.hoverslideup {
+		position: relative;
+		top: 0px;
+		height: 70px;
+		 .transition(top 0.5s)
+	}
+	.hoverslideup:hover {
+		top: -30px;
 	}
 }
 
