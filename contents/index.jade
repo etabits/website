@@ -87,6 +87,28 @@ template: layout.jade
 :markdown
 
 	## Open Source
+	**EtaBits** is an active member of the Open Source community, we build upon the solid greatness provided by many many open-source software: **GNU, Linux, Nginx, Node.js, PHP, MySQL...** and the list goes on and on.
+
+	This very site is created using open-source tools, and its complete source is available at
+	<a class="icon-github-circled" href="https://github.com/etabits/website">etabits/website</a>.
+
+	### Contributions
+	We keep trying to pay it forward... our team has contributed few open-source modules for everyone to use:
+
+- repos = []
+- repos.push(['etabits/socialiter', 'Extra Lightweight Social-Network Buttons on Your Webpages!']);
+- repos.push(['etabits/scroll-spy', 'Vanilla Javascript Scroll Spy ']);
+- repos.push(['etabits/wintersmith-nap', 'Minimalistic plugin to connect wintersmith with nap']);
+- repos.push(['aularon/node-elephant', 'A fast & memory-efficient data structure that cat tell if it saw a string before']);
+- repos.push(['aularon/node-octopus', 'An octopus that can get his hands all over the web.']);
+
+ul.list-unstyled(style='padding-left: 20px')
+	each repo in repos
+		li
+			a.icon-github-circled(href="https://github.com/"+repo[0])=repo[0]
+			| - #{repo[1]}
+
+:markdown
 
 	## Contact
 
