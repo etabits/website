@@ -15,3 +15,6 @@ publish:
 	wintersmith build
 	rm -fr build/assets/contents
 	rsync -vaP build/ alma:~/etabits.com/public/
+
+sitemap-ping:
+	wget -O- http://www.google.com/webmasters/tools/ping?sitemap=http%3A%2F%2Fwww.etabits.com%2Fsitemap.xml
