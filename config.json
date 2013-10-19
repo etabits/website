@@ -12,5 +12,9 @@
         "main": ["/js/??-*"]
       }
     }
+  },
+  "require": {
+    "_": "underscore",
+    "fs": "fs"
   }
 }

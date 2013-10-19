@@ -1,0 +1,10 @@
+doctype xml
+
+- files = _.select(contents._.pages, function(item){return item.filepath.relative.match(/\.(jade|md)$/);})
+- files = files.map(function(item) {return item.filepath.relative})
+urlset(xmlns='http://www.sitemaps.org/schemas/sitemap/0.9')
+    - //var filenames = _.uniq(page._metadata.files.sort());
+        each file in files
+            url
+                loc='http://www.etabits.com/'+encodeURI(file.replace(/\.(jade|md)$/, '.html'))
+                lastmod=fs.statSync('contents/'+file).mtime.toISOString()

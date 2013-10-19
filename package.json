@@ -4,6 +4,7 @@
     "wintersmith-jade": "*",
     "wintersmith-nap": "*",
     "wintersmith-coffee": "*",
-    "marked": "*"
+    "marked": "*",
+    "underscore": "*"
   }
 }
