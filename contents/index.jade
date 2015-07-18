@@ -1,13 +1,12 @@
 ---
-title: 'EtaBits Web Development and Solutions'
-template: layout.jade
+title: 'Web Development and Solutions'
+h1Title: EtaBits Syria
+template: site/layout.jade
 ---
 
 .page-header
 	h1
-		span.icon-etabits
-			abbr(title="EtaBits") ηBits
-			|  Syria
+		span.icon-etabits EtaBits Syria
 		small  Web Development &amp; Solutions
 
 
@@ -65,23 +64,46 @@ template: layout.jade
 	### Integrated Solutions
 	Want a solution that takes into account all the aspects of successful websites? Or maybe you don't want to get involved in all the technical details? We can build you the solution that suits your need from A to Z.
 
+	## Additional Services
+	We work with a network of professionals to provide you with solutions for all your technological needs, from **High-End Mobile Applications**, down to everyday maintenance tasks.
 
+	Our main goal is to guide the development and test process, in order to deliver the final product in its best shape. And later on, to maintain updates in the post-delivery phase.
+
+	### Mobile Applications
+	Whether native **Android**, **iOS**, or **HTML5 Apps**, we can give you the right product tailored to your specific needs.
+	### Networking Setups and Solutions
+	Need a
+	<abbr title="Local Area Network">LAN</abbr>
+	solution for your home or workplace? Our specialists will walk you through the possible options and solutions, all the pros and cons, and then implement the solution you choose.
+
+	### Maintenance & IT Management
+	Our network of
+	<abbr title="Information Technology">IT</abbr>
+	managers and maintenance experts can help you with your everyday IT-related needs. From updating your company's software, fixing your non-functional printer, to planning the platform to use for your next project!
 
 	## Portfolio
 
 - portfolio = []
-- portfolio.push(['bostah', 'http://bostah.com', 'Bostah Syrian Drama Portal']);
-- portfolio.push(['fairuz', 'http://fairuz.lastown.com', 'Fairuz Lyrics Website']);
-- portfolio.push(['ardroid', 'http://apps.samsung.com/venus/appquery/appDetail.as?appId=com.spapps.ardroid5', 'Ardroid Samsung App (Backend Development)']);
-- portfolio.push(['ecal', 'http://esyria.sy/ecal/', 'eSyria Cultural Calendar']);
-- portfolio.push(['zikrana', 'http://zikrana.com', 'Zikrana Videograhy Service']);
+- portfolio.push(['7rf.png', 'https://www.7rf.me', '7rf Arabic Writing Platform']);
+- portfolio.push(['bostah.jpeg', 'http://bostah.com', 'Bostah Syrian Drama Portal']);
+- portfolio.push(['fairuz.jpeg', 'http://fairuz.lastown.com', 'Fairuz Lyrics Website']);
+- portfolio.push(['ardroid.jpeg', 'http://apps.samsung.com/venus/appquery/appDetail.as?appId=com.spapps.ardroid5', 'Ardroid Samsung App (Backend Development)', true]);
+- portfolio.push(['officeworlds.jpeg', 'http://www.officeworlds.com/', 'Office Worlds Online Retail Store', 'Co-Development with WebGearMedia.com']);
+- portfolio.push(['ecal.jpeg', 'http://esyria.sy/ecal/', 'eSyria Cultural Calendar', true]);
+- portfolio.push(['ripaco.jpeg', 'http://ripaco.com', 'Ripaco (Rikabi Paper Conversion)', 'Homepage remake, various modifications']);
+- portfolio.push(['zikrana.jpeg', 'http://zikrana.com', 'Zikrana Videograhy Service']);
+- portfolio.push(['sns.jpeg', 'http://sns.sy/sns/', 'Syrian News Station', 'Co-Development with Tamayuz.com']);
+- portfolio.push(['alrakameiat.jpeg', 'http://www.alrakameiat.com/', 'Al-Rrakameiat IT Newspaper', 'Co-Development with Tamayuz.com']);
 
-.row
+
+.row#portfolio-items
 	each site in portfolio
 		.col-md-3.col-sm-4.col-xs-6
-			a.thumbnail(target='_blank', href=site[1])
-				img(alt=site[0], src='/img/portfolio/#{site[0]}.jpeg')
+			a.thumbnail(target='_blank', href=site[1], rel=site[3]?'nofollow':null)
+				img(alt=site[2], src='/img/portfolio/#{site[0]}')
 				p=site[2]
+				if 'string' == typeof site[3]
+					span.badge(title=site[3]) ?
 
 
 :markdown
