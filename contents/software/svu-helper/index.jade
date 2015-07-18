@@ -1,0 +1,86 @@
+---
+title: 'SVU Helper - مساعد الطالب'
+template: site/layout.jade
+ogImage: 'http://www.etabits.com/software/svu-helper/my.jpeg'
+metaDescription: 'Providing quick and easy access to updated information the students need - تأمين طريقة سهلة وسريعة للوصول إلى معلومات محدّثة تهمّ الطالب: علاماته، مواعيد الإمتحان، معلومات أوقات الصفوف وأساتذتها...)'
+---
+
+.page-header
+	h1
+		| SVU Helper
+		small(lang='ar')  مساعد الطالب في الجامعة الإفتراضية
+
+h2#background Background - الفكرة
+p(lang='ar') أتت فكرة البرنامج من واقع أن موقع الجامعة الإفتراضية كبير الحجم وغير صديق للموبايل أبداً، إضافة إلى أن بعض الوظائف معقدة الوصول بإستخدامه (مثل مقاطعة أساتذة وأوقات المادة عند إختيار الصفوف).
+p(lang='ar') لذلك أتى البرنامج لتقديم حل لبعض هذه المشاكل، إضافة إلى أنه يقدّم استهلاك قليل جدّاً للبيانات وأداء عالي السرعة.
+
+h2#goal Goal - الهدف
+
+p Providing quick and easy access to updated information the students need.
+
+p(lang='ar') تأمين طريقة سهلة وسريعة للوصول إلى معلومات محدّثة تهمّ الطالب (علاماته، مواعيد الإمتحان...)
+
+h2#features Features - الميّزات
+div(lang='ar')
+	:markdown
+		إضافة لكونه لا يستخدم إلّا حوالي النصف كيلو بايت لإظهار أي من واجهاته، يقدم البرنامج وصولاً إلى المعلومات التالية:
+		* عرض معلومات عن الصفوف المسجّل ضمنها
+		* عرض علاماتي
+		* عرض مواعيد الإمتحان خاصتي
+		* إستعراض معلومات الصفوف والأساتذة وأوقاتها لأي مادة
+
+h2#screenshots Screenshots - صور من البرنامج
+.screenshots
+	- var screenshots = []
+	- screenshots.push(['basic', 'Login & Main Screen - تسجيل الدخول والشاشة الرئيسية'])
+	- screenshots.push(['my', 'My Results, Exams & Classes - علاماتي، إمتحاناتي وموادي'])
+	- screenshots.push(['browse', 'Browse Programs, Courses & Classes - إستعراض البرامج، المواد والصفوف'])
+	each s in screenshots
+		h3=s[1]
+		a(target='_blank', href=s[0]+'.jpeg')
+			img.img-responsive(src=s[0]+'.jpeg', alt=s[1])
+
+h2#whatsnew What's New? - ما الجديد؟
+
+h3 Build 513
+div(lang='ar')
+	:markdown
+		* العمل دون إتصال: تذكر المعلومات السابقة وعرضها عند عدم توافر انترنت
+		* إستعراض الصفوف والأوقات لبرنامج الـISE
+		* تسجيل الدخول تلقائيّاً عند فتح البرنامج
+		* إصلاح عدد من المشاكل، إستقرار أعلى
+		* رسائل خطأ واضحة بدلاً من توقّف البرنامج عن العمل في بعض الحالات
+		* تغيير وضع الشاشة عن استعراض أي معلومات، لا يسبب جلبها من جديد، بل تعرض مباشرة
+		* Code rewrite :-)
+
+h3 Build 619
+div(lang='ar')
+	:markdown
+		* دعم إختيار الصفوف
+		* دعم اللغة العربية
+		* إصلاح بعض المشاكل البسيطة، وإضافة بعض التحسينات
+
+h2#download Download - تحميل
+
+a.btn.btn-primary.btn-lg.btn-block(href='/beta/com.etabits.svu.helper.apk?via=page&v=619',style='margin: 0 auto; display: block; max-width: 500px')
+	| Download SVU Helper
+	br
+	| تحميل آخر نسخة من برنامج
+	br
+	| مساعد الطالب في الجامعة الإفتراضية
+
+.text-center
+	.text-info تعمل مع جميع نسخ آندرويد 4.0.3 فما فوق
+	.text-muted باقي المستخدمين بإمكانهم إستعمال نسخة الويب أدناه
+
+h2#download Web Edition - نسخة الويب
+
+a.btn.btn-info.btn-lg.btn-block(href='http://svuhelper.etabits.com/?utm_source=etabits&utm_medium=infopage',style='margin: 0 auto; display: block; max-width: 500px')
+	| SVU Helper Web Edition
+	br
+	| نسخة الويب من
+	br
+	| مساعد الطالب في الجامعة الإفتراضية
+
+.text-center
+	.text-info تعمل مع جميع المتصفحات المكتبية والمحمولة

@@ -1,0 +1,72 @@
+---
+title: 'IT Management & Technical Support'
+template: site/layout-bare.jade
+---
+
+- levels = []
+- levels.push(['Company Support', 50, 550, 15, 10, '4+2']);
+- levels.push(['Small Company Support', 40, 600, 10, 8, '3+1']);
+- levels.push(['Start-up Support', 30, 650, 10, 7, '2+2']);
+- levels.push(['Basic Support', 20, 700, 8, 4, '2+2']);
+- levels.push(['Home Support', 15, 750,  5, 2, '2+1']);
+- levels.push(['Personal Support', 10, 800,  2, 1, '2+1']);
+
+
+
+.page-header
+	h1.text-center=title
+
+:less
+	#main-container {
+		min-height: 0px;
+	}
+h2 Pricing Sheet
+table.table.table-bordered.table-condensed
+	tr
+		th Package
+		th.text-center Hours/Month
+		th Rate 
+			.pull-right (Dis.)
+		th.text-center Devices*
+		th.text-center Days/Week**
+		th.text-right Monthly Fee
+	each l in levels
+		tr
+			td=l[0]
+			td.text-center=l[1]
+			td #{l[2]}
+				.pull-right (-#{(1000-l[2])/10}%)
+			td.text-center #{l[3]}+#{l[4]}
+			td.text-center=l[5]
+			td.text-right=((l[1]*l[2])+'').replace(/(\d{3})$/, '\,$1 SYP')
+
+p * The total number of devices (PCs, Tablets, Mobiles...) included in the package. In addition to (+) peripherals (printers, scanners, routers...) to be maintained as well.
+p ** The maximum days per week for on ground support. Plus the days including remote support.
+
+:markdown
+	## Terms &amp; Conditions
+
+	* Support hours cover regular maintenance tasks, e.g. programs installation, fixing problems, windows maintenance... It does not cover, for example, modifying your website.
+	* Hours beyond package hours are calculated as following: Hours within 25% of package total hours, has a fee of (rate+150). For example, the **Small Company Support** package has a rate of 750 SYP for the first 10 extra hours.
+
+		Additional hours are 1000 SYP each.
+
+	* First month has a 50% down payment. It includes (free of charge) the installation of remote support programs. Remote support hours have the same rate of regular support hours.
+
+
+	* Additional details are available upon request. Minor details are negotiable. We aim to provide the best support for reasonable rates. Don't hesitate to contact us.
+hr
+.row
+	.col-xs-4
+
+		p Mezzeh Highway, Damascus.
+		p EtaBits Syria
+	.col-xs-4
+		.icon-etabits.text-center(style='font-size: 4em')
+	.col-xs-4.text-right
+
+		p +963 988 770321
+		p +963 11 6626011 (404)
+
+		p(style="unicode-bidi:bidi-override; direction: rtl;") moc.stibate＠nimda
+

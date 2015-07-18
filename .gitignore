@@ -1,3 +1,5 @@
 build/
 contents/assets/
 node_modules/
+content/blog/
+templates/blog/
