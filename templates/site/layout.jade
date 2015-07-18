@@ -1,8 +1,9 @@
-!!! 5
+doctype html
 html(lang='en')
   head
     meta(charset='utf-8')
-    title= locals.title
+    title= page.title
+      |  - EtaBits
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     != nap.css('main')
     link(href='http://fonts.googleapis.com/css?family=Roboto+Slab:400|Open+Sans:400,700',rel='stylesheet',type='text/css')
@@ -11,17 +12,18 @@ html(lang='en')
     //if lt IE 8
       script(src='http://html5shiv.googlecode.com/svn/trunk/html5.js')
       script(src='//cdnjs.cloudflare.com/ajax/libs/respond.js/1.3.0/respond.js')
-    meta(name="description",content="ηBits is a Syria based Web Consultancy, Development & Solutions firm. We aim at providing you with exactly what you need to reach your users and clients.")
-    meta(property="og:image", content="http://www.etabits.com/img/logo.jpeg")
+    meta(name="description",content=page.metadata.metaDescription || "ηBits is a Syria based Web Consultancy, Development & Solutions firm. We aim at providing you with exactly what you need to reach your users and clients.")
+    meta(property="og:image", content=page.metadata.ogImage||"http://www.etabits.com/img/logo.jpeg")
     each size in [144,114,72,57]
       link(rel="apple-touch-icon", sizes="#{size}x#{size}", href="/img/apple-touch-icon-#{size}.png")
+    meta(property="fb:admins", content="589809788")
   body
     .container#main-container
       .row
         .col-sm-3#sidebar
-          include p/sidebar
-          include p/social
+          include ../p/sidebar
+          include ../p/social
         .col-sm-9.col-sm-offset-3#content
-          != page.html.replace(/<h2>([^<]+)/g, function(a,label) {return '<h2 id="'+label.replace(/ +/g, '-')+'">'+label})
+          != page.html.replace(/<h2>([^<]+)/g, function(a,label) {return '<h2 id="'+label.toLowerCase().replace(/[^\w]+/g, '-')+'">'+label})
     != nap.js('main')
     #fb-root

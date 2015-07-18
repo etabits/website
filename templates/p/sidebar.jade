@@ -1,9 +1,7 @@
 .sidebar-nav(role='navigation')#sidenav
-
 	ul.nav.nav-pills.nav-stacked
 		li
-			a(href="#content") ηBits Syria
-		each label in page.html.match(/<h2>([^<]+)/g)
-			li
-				- label = label.substr(4)
-				a(href='#'+label.replace(/ +/g, '-'))= label
+			a(href="#content")=page.metadata.h1Title || page.title
+		each label in page.html.match(/<h2[^>]*>([^<]+)/g)
+			- console.log(label)
+			li!=label.replace('<h2 id="', '<a href="#')+'</a>'

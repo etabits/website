@@ -1,0 +1,16 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    title= locals.title
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    != nap.css('main')
+    link(href='http://fonts.googleapis.com/css?family=Roboto+Slab:400|Open+Sans:400,700',rel='stylesheet',type='text/css')
+    meta(name="description",content="ηBits is a Syria based Web Consultancy, Development & Solutions firm. We aim at providing you with exactly what you need to reach your users and clients.")
+    :less
+      body {
+      background: #fff;
+      }
+  body
+    .container#main-container
+      != page.html
