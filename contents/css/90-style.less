@@ -28,6 +28,7 @@ body {
 }
 #main-container {
 	padding-top: 3px;
+	padding-bottom: 50px;
 	background: #fff;
 	background: rgba(255, 255, 255, .94);
 	.box-shadow(0 1px 8px #ccc);
@@ -57,7 +58,7 @@ body {
           user-select: none;
           cursor: default;
 	}
-	.thumbnail {
+	#portfolio-items .thumbnail {
 		height: 190px;
 		p {
 			padding: 5px;
@@ -99,6 +100,19 @@ h1, h2, h3, h4 {
 }
 
 
+#portfolio-items a.thumbnail {
+	position: relative;
+	.badge {
+		position: absolute;
+		top: -10px;
+		right: -10px;
+		background-color: #006994;
+		.box-shadow(0 0px 8px #fff);
+		font-size: 1.25em;
+	}
+}
+
+
 
 @media (min-width: 768px) {
 	#sidebar {
@@ -109,7 +123,8 @@ h1, h2, h3, h4 {
 }
 
 @media (max-width: 767px) {
-	#main-container .thumbnail {
+
+	#portfolio-items .thumbnail {
 		height: 210px;
 	}
 	#social {
@@ -121,4 +136,12 @@ h1, h2, h3, h4 {
 		z-index: 10;
 		.box-shadow(0 0px 8px #999);
 	}
+}
+
+
+
+
+
+[lang='ar'] {
+	direction: rtl;
 }
