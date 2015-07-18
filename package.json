@@ -5,6 +5,7 @@
     "wintersmith-nap": "*",
     "wintersmith-coffee": "*",
     "marked": "*",
-    "underscore": "*"
+    "underscore": "*",
+    "less": "~1.7.0"
   }
 }
